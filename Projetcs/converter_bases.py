@@ -5,7 +5,9 @@ b16 = [0,1,2,3,4,5,6,7,8,9,"A","B","C","D","E","F"]
 
 var = int(input())
 var_16 = var
+stock_var = var
 data = var
+final = 0
 
 def base2():
 
@@ -25,8 +27,9 @@ def base2():
 
 
     reversed_stock = stock[::-1]
-
-    print(reversed_stock)
+    reversed_stock = str(reversed_stock)
+    pattern = re.sub("[^0-9]", "", reversed_stock)
+    print(stock_var, "s'écrit", pattern, "en base 2 (binaire).")
 
 def base16():
 
@@ -44,7 +47,10 @@ def base16():
             stock.append(b16[data])
 
     reversed_number = stock[::-1]
-    print(reversed_number)   
+    reversed_number = str(reversed_number)
+    pattern = re.sub("[^0-9A-Z]", "", reversed_number)
+    print(stock_var, "s'écrit", pattern, "en base 16 (héxadécimal).")
+
     
 base2()
 base16()
