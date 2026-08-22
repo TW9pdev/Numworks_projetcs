@@ -1,3 +1,4 @@
 # Détails:
 
-## Le répo a été recréer totalement pour cause de problèmes internes.
+## Le répo a été recréé totalement pour cause de problèmes internes.
+
