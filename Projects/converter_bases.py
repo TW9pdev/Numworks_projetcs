@@ -1,9 +1,14 @@
-import re
 from math import*
 
 b16 = [0,1,2,3,4,5,6,7,8,9,"A","B","C","D","E","F"]
 
-var = int(input())
+while True:
+    try:
+        var = int(input("Entrre un nombre en base 10: "))
+        break
+    except ValueError:
+        print()
+
 var_16 = var
 stock_var = var
 data = var
@@ -28,8 +33,7 @@ def base2():
 
     reversed_stock = stock[::-1]
     reversed_stock = str(reversed_stock)
-    pattern = re.sub("[^0-9]", "", reversed_stock)
-    print(stock_var, "s'écrit", pattern, "en base 2 (binaire).")
+    print(stock_var, "s'écrit", reversed_stock, "en base 2 (binaire).")
 
 def base16():
 
@@ -48,8 +52,7 @@ def base16():
 
     reversed_number = stock[::-1]
     reversed_number = str(reversed_number)
-    pattern = re.sub("[^0-9A-Z]", "", reversed_number)
-    print(stock_var, "s'écrit", pattern, "en base 16 (héxadécimal)")
+    print(stock_var, "s'écrit", reversed_number, "en base 16 (héxadécimal)")
 
 
 
