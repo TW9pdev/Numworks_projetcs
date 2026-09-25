@@ -20,17 +20,16 @@ def tout():
   else:   
      print(percentage, "% de", choix, "est", choix*percentage/100)
   
-  var = input("'Continuer' ou 'Exit'")
-  if var == "Continuer":
+  while True:
+      try:
+         var = int(input(" '0' pour continuer, '1 pour quitter"))
+         break
+      except ValueError:
+         print()
+   
+  if var == 0:
      tout()
-  if var == "Exit":
+  if var == 1:
     exit()
-  
-  while var != "Continuer" "Exit":
-     var = input("'Continuer' ou 'Exit'")
-     if var == "Continuer":
-        tout()
-     if var == "Exit":
-        exit()
 
 tout()

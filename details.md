@@ -7,4 +7,3 @@
 ## A venir:
 
 - Programme pour le complément à 2 sur 8 bits en binaire.
-
