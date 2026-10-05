@@ -1,6 +1,7 @@
-from math import *
-
 def all():
+
+  check_premier = 3
+  check_2 = 0
 
   while True:
     try:
@@ -8,12 +9,20 @@ def all():
       break
     except ValueError:
       print()
-      
-  if fmod(var, 2) == True:
-    print(var, "est premier.")
+
+  if var % 2 == 1:
+    while var != check_premier:
+        if var % check_premier == 0:
+            break
+        else:
+            check_premier += 1
+            check_2 += 1
+        
+  if check_2 != 0:
+      print("Le nombre est premier")
   else:
-    print(var, "n est pas premier.")
-    
+    print("Le nombre n'est pas premier")
+      
   while True:
     try:
       var=int(input("0 pour continuer, 1 pour quitter: "))
